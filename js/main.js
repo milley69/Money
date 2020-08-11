@@ -4,3 +4,10 @@ $(document).ready(function() {
     $('body').toggleClass('lock');
   });
 });
+
+if( window.screen.width >= 768 ){
+     document.querySelector('.null').style.display = "none"
+} else {
+     document.querySelector('.null').style.display = "block"
+}
+console.log(document.querySelector('.null'));
