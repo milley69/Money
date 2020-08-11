@@ -34,6 +34,7 @@ header
   img
     margin: auto
     margin-left: 0
+    z-index: 500
 
   nav
     margin: auto
@@ -74,7 +75,6 @@ header
   display: none
 
 .header__burger.active
-  top: 69px
   &::before
     transform: rotate(45deg)
     top: 9px
@@ -89,6 +89,8 @@ header
     overflow: hidden
   .navigation img
     margin-left: 15%
+  .navigation nav
+    display: none
 
   .login
     display: none
@@ -105,7 +107,7 @@ header
       height: 2px
       position: absolute
       left: 0
-      background-color: #64c29e
+      background-color: #160647
       transition: all .3s ease 0s
     &::after
       top: 0
@@ -113,7 +115,7 @@ header
       bottom: 0
     span
       position: absolute
-      background-color: #64c29e
+      background-color: #160647
       width: 100%
       left: 0
       top: 9px
@@ -129,7 +131,7 @@ nav.active
   display: block
   position: absolute
   width: 100%
-  background-color: #222429
+  background: linear-gradient(180deg, rgba(236,231,248,1) 0%, rgba(219,211,241,1) 100%)
   height: 100vh
   overflow: auto
   transition: all .3s ease 0s
