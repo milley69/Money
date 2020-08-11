@@ -5,8 +5,8 @@ $(document).ready(function() {
   });
 });
 
-if( window.screen.width >= 768 ){
-     document.querySelector('.null').style.display = "none"
-} else {
-     document.querySelector('.null').style.display = "block"
-}
+// if (window.screen.width >= 768) {
+//   document.querySelector('.null').style.display = "none"
+// } else {
+//   document.querySelector('.null').style.display = "block"
+// }
