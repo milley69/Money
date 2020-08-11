@@ -10,4 +10,3 @@ if( window.screen.width >= 768 ){
 } else {
      document.querySelector('.null').style.display = "block"
 }
-console.log(document.querySelector('.null'));
