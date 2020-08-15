@@ -10,3 +10,11 @@
 // // } else {
 // //   document.querySelector('.null').style.display = "block"
 // // }
+
+var headerBurger = document.querySelector('.header-burger');
+var burgerBg = document.querySelector('.burger-bg');
+
+headerBurger.addEventListener('click', function(){
+  headerBurger.classList.toggle('open'),
+  burgerBg.classList.toggle('open');
+})
