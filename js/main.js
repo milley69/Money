@@ -13,8 +13,10 @@
 
 var headerBurger = document.querySelector('.header-burger');
 var burgerBg = document.querySelector('.burger-bg');
+var headerNav = document.querySelector('.header_nav nav');
 
 headerBurger.addEventListener('click', function(){
   headerBurger.classList.toggle('open'),
+  headerNav.classList.toggle('open'),
   burgerBg.classList.toggle('open');
 })
