@@ -2,20 +2,7 @@
 @import "font.sass"
 @import "mixin/hover/hover.sass"
 
-*,*::before,*::after
-  box-sizing: border-box
-  margin: 0
-  padding: 0
-  border: none
-
-html
-  overflow-x: hidden
-
-.container
-  max-width: 1100px
-  padding-left: 15px
-  padding-right: 15px
-  margin: 0 auto
+@import "qq.sass"
 
 header
   height: 100vh
@@ -24,166 +11,188 @@ header
   background: -webkit-linear-gradient(180deg, rgba(236,231,247,1) 0%, rgba(219,211,241,1) 15%, rgba(255,255,255,1) 100%)
   background: linear-gradient(180deg, rgba(236,231,247,1) 0%, rgba(219,211,241,1) 15%, rgba(255,255,255,1) 100%)
 
-.navigation
-  min-height: 90px
-  display: -webkit-flex
-  display: flex
-  justify-content: space-between
-  align-items: center
+@import "navigation.sass"
 
-.header_logo
-  z-index: 5
-nav
-  a
-    color: #4e5983
-    text-decoration: none
-    @include hover_center(#4e5983, 100%)
-    margin-right: 40px
-    z-index: 5
-    &:last-child
-      margin-right: 0
+#main
+  background: url(../img/bg.png) no-repeat center / cover
+  width: 100%
+  height: 100%
 
+  h1
+    max-width: 853px
+    color: #ffffff
+    font-size: 60px
+    font-weight: 700
+    line-height: 67.14px
+    text-align: center
+    margin: 0 auto
+    padding-top: 110px
+    text-align: center
 
-.login
-  button
-    color: #4e5983
-    font-size: 16px
-    cursor: pointer
+  h4
+    color: #ffffff
+    font-size: 19px
+    padding-top: 22px
     font-weight: 400
+    text-align: center
+
+  #exchange
+    // display: grid
+    // grid-template-columns: 300px 110px 300px 157px
+    // grid-template-rows: 126px
+    // justify-content: center
+    display: flex
+    justify-content: space-around
+    padding-top: 78px
+
+    margin: 54px auto 0
+    position: relative
+    max-width: 1109px
+    height: 284px
+    border-radius: 26px
+    border: 4px solid #f7f8fd
+    background-color: #ffffff
+    background: rgba(255 , 255, 255, 0.8)
+    z-index: 1
+    &::after, &::before
+      content: ""
+      position: absolute
+      background: rgba(255 , 255, 255, 0.2)
+      border-radius: 0px 0px 26px 26px
+      -moz-border-radius: 0px 0px 26px 26px
+      -webkit-border-radius: 0px 0px 26px 26px
+      z-index: -5
+    &::after
+      width: 1009px
+      height: 20px
+      left: 35px
+      bottom: -20px
+    &::before
+      width: 919px
+      height: 26px
+      left: 80px
+      bottom: -30px
+
+
+
+.payment
+  margin-left: 50px
+.payment,
+.enter
+  height: 126px
+  display: grid
+  p
+    color: #4e5983
+    font-size: 18px
+    font-weight: 500
+    padding-bottom: 9px
+    span
+      color: #4e5983
+      font-size: 12px
+      font-weight: 400
+      margin-bottom: -20px
+  span
+    opacity: 0.5
+    color: #4e5983
+    font-size: 14px
+    font-weight: 400
+    align-self: flex-end
+  form
+    display: flex
+    align-items: flex-end
+    position: relative
+    &::before
+      content: ""
+      position: absolute
+      bottom: -6px
+      left: 0
+      width: 195px
+      height: 2px
+      background-color: #d6dce2
+      opacity: 0.25
+    &::after
+      content: ""
+      position: absolute
+      bottom: 0
+      left: 95px
+      width: 2px
+      height: 25px
+      background-color: #cfd4da
+    select
+      margin-left: 25px
+      background: none
+      padding: 12px 12px 12px 5px
+      &:checked ~ #text
+        background: transparent
+        color: transparent
+        z-index: 2
+      &:hover
+        background: rgba(0, 0, 0, 0.2)
+      &:focus
+        outline: none
+
+
+  input[type="number"]
+    font-size: 20px
+    padding: 0px
     background: none
-    width: 120px
-    z-index: 5
-    height: 55px
-    transition: .3s
-    border-radius: 9px
-    animation-timing-function: ease-in-out
-    &:hover
-      background-color: rgba(161,127,255,0.11)
+    width: 90px
     &:focus
       outline: none
 
 
 
-.header-burger
-  display: none
+.swap
+  align-self: center
+  padding-top: 37px
 
 
+  button[name="swap"]
 
-@media (max-width: 810px)
-  .login
-    button
-      width: 90px
-
-
-@media (max-width: 767px)
-  nav
-    a
-      margin-right: 16px
-
-@media (max-width: 690px)
-  .header-burger
-    width: 20px
-    height: 20px
-    display: flex
-    flex-direction: column
-    justify-content: space-between
-    margin-right: 16px
+    background: none
+    width: 17px
+    height: 17px
+    font-size: 15px
+    color: #4e5983
     cursor: pointer
-    transition: transform 330ms ease-out
-    &.open
-      transform: rotate(-45deg)
-
-  .line-menu
-    background-color: #4e5983
-    border-radius: 5px
-    width: 100%
-    height: 2px
-    &.half
-      width: 50%
-    &.start
-      transition: transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57)
-      transform-origin: right
-    &.end
-        align-self: flex-end
-        transition: transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57)
-        transform-origin: left
-
-  .open .line-menu
-    background-color: #fff
-  .open .line-menu.start
-    transform: rotate(-90deg) translateX(3px)
-
-  .open .line-menu.end
-    transform: rotate(-90deg) translateX(-3px)
-
-  nav
-    display: none
-  .login
-    position: absolute
-    top: -44px
-    left: 32px
-    transition: 0.4s
-    animation-timing-function: ease-in-out
-    button
-      display: none
-    &.open
-      top: 262px
-
-      button
-        font-size: 28px
-        color: #a07efe
-        display: inline-block
-        width: 45%
-        &:hover
-          background: none
-
-  nav
-    position: absolute
-    top: -153px
-    left: 42px
-    display: flex
-    flex-direction: column
     transition: .3s
     animation-timing-function: ease-in-out
-    &.open
-      top: 68px
-      a
-        color: #160647
-        font-size: 28px
-        margin-top: 20px
+
+    &:hover
+      transform: scale(1.1)
+    &:focus
+      outline: none
 
 
+.button-exchange
+  align-self: center
+  padding-top: 37px
 
-.burger-bg
-  background: rgb(86,46,194)
-  background: -moz-linear-gradient(0deg, rgba(86,46,194,1) 0%, rgba(160,126,254,1) 100%)
-  background: -webkit-linear-gradient(0deg, rgba(86,46,194,1) 0%, rgba(160,126,254,1) 100%)
-  background: linear-gradient(0deg, rgba(86,46,194,1) 0%, rgba(160,126,254,1) 100%)
-  position: absolute
-  top: 0
-  left: 0
-  width: 100%
-  height: 0
-  border-radius: 0 0 500px 500px
-  transition: .4s
-  animation-timing-function: ease-in-out
-  &.open
-    border-radius: 0 0 25px 25px
-    height: 45%
+  button[name="exchange"]
+    width: 157px
+    height: 55px
+    margin-right: 17px
+    font-weight: 700
+    font-size: 14px
+    color: #ffffff
+    cursor: pointer
+    border-radius: 9px
+    // background-image: linear-gradient(NaNdeg, #562ec2 0%, #a07efe 100%)
+    background: rgb(86,46,194)
+    background: -moz-linear-gradient(90deg, rgba(86,46,194,0.8) 0%, rgba(160,126,254,0.8) 100%)
+    background: -webkit-linear-gradient(90deg, rgba(86,46,194,0.8) 0%, rgba(160,126,254,0.8) 100%)
+    background: linear-gradient(90deg, rgba(86,46,194,0.8) 0%, rgba(160,126,254,0.8) 100%)
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#562ec2",endColorstr="#a07efe",GradientType=1)
 
+    transition: 1s
+    animation-timing-function: ease-in-out
 
-
-
-
-
-
-
-
-
-
-
-
-
+    &:hover
+      transition: .3s
+      animation-timing-function: ease-in-out
+      transform: scale(1.1)
+    &:focus
+      outline: none
 
 
 
