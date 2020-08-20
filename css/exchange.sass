@@ -1,0 +1,318 @@
+#main
+  // background: url(../img/bg.png) no-repeat center / cover
+  // background: url(../img/bg.png) no-repeat center / cover
+  width: 100%
+  // height: 100%
+  height: calc(100% - 90px)
+  height: -moz-calc(100% - 90px)
+  height: -webkit-calc(100% - 90px)
+  background-repeat: no-repeat
+  background-position: center
+  background-size: cover
+
+  h1
+    max-width: 853px
+    color: #ffffff
+    font-size: 60px
+    font-weight: 700
+    line-height: 67.14px
+    text-align: center
+    margin: 0 auto
+    padding-top: 110px
+    text-align: center
+
+  h4
+    color: #ffffff
+    font-size: 19px
+    padding-top: 22px
+    font-weight: 400
+    text-align: center
+
+  #exchange
+    // display: grid
+    // grid-template-columns: 300px 110px 300px 157px
+    // grid-template-rows: 126px
+    // justify-content: center
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    justify-content: space-around
+    padding-top: 78px
+
+    margin: 54px auto 0
+    position: relative
+    max-width: 1109px
+    height: 284px
+    border-radius: 26px
+    border: 4px solid #f7f8fd
+    background-color: #ffffff
+    background: rgba(255 , 255, 255, 0.8)
+    z-index: 1
+    &::after, &::before
+      content: ""
+      position: absolute
+      background: rgba(255 , 255, 255, 0.2)
+      border-radius: 0px 0px 26px 26px
+      -moz-border-radius: 0px 0px 26px 26px
+      -webkit-border-radius: 0px 0px 26px 26px
+      z-index: -5
+    &::after
+      width: 1009px
+      height: 20px
+      left: 35px
+      bottom: -20px
+    &::before
+      width: 919px
+      height: 26px
+      left: 80px
+      bottom: -30px
+
+
+
+.payment
+  margin-left: 50px
+.payment,
+.enter
+  height: 126px
+  display: grid
+  p
+    color: #4e5983
+    font-size: 18px
+    font-weight: 500
+    padding-bottom: 9px
+    span
+      color: #4e5983
+      font-size: 12px
+      font-weight: 400
+      margin-bottom: -20px
+  span
+    opacity: 0.5
+    color: #4e5983
+    font-size: 14px
+    font-weight: 400
+    align-self: flex-end
+  form
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    align-items: flex-end
+    position: relative
+    &::before
+      content: ""
+      position: absolute
+      bottom: -6px
+      left: 0
+      width: 195px
+      height: 2px
+      background-color: #d6dce2
+      opacity: 0.25
+    &::after
+      content: ""
+      position: absolute
+      bottom: 6px
+      left: 95px
+      width: 2px
+      height: 25px
+      background-color: #cfd4da
+    select
+      margin-left: 25px
+      background: none
+      padding: 12px 12px 12px 5px
+      position: relative
+      color: #4e5983
+      border-radius: 0px
+      // padding: 18px 36px
+      display: inline-block
+      font-size: 14px
+      letter-spacing: 1px
+      cursor: pointer
+      box-shadow: inset 0 0 0 0 #7250cd
+      -webkit-transition: ease-in-out 0.55s
+      -moz-transition: ease-in-out 0.55s
+      transition: box-shadow ease-in-out 0.55s, color ease-in-out 1s
+      &:hover
+        transition: box-shadow ease-in-out 0.55s, color ease-in-out 0.2s
+        box-shadow: inset 200px 38px 0 0 #ae91fe
+        color: #fff
+      &:focus
+        outline: none
+      option
+        color: #4e5983
+        background: #f3effe
+        &:focus
+          outline: none
+
+
+  input[type="number"]
+    font-size: 20px
+    padding: 0px
+    background: none
+    width: 90px
+    &:focus
+      outline: none
+
+
+
+.swap
+  align-self: center
+  padding-top: 15px
+  button[name="swap"]
+    background: none
+    width: 17px
+    height: 17px
+    font-size: 15px
+    color: #4e5983
+    cursor: pointer
+    transition: .3s
+    animation-timing-function: ease-in-out
+    &:hover
+      transform: scale(1.1)
+    &:focus
+      outline: none
+
+
+.button-exchange
+  align-self: center
+  padding-top: 37px
+
+  button[name="exchange"]
+    width: 157px
+    height: 55px
+    margin-right: 17px
+    font-weight: 700
+    font-size: 14px
+    color: #ffffff
+    cursor: pointer
+    border-radius: 9px
+    // background-image: linear-gradient(NaNdeg, #562ec2 0%, #a07efe 100%)
+    background: rgb(86,46,194)
+    background: -moz-linear-gradient(90deg, rgba(86,46,194,0.8) 0%, rgba(160,126,254,0.8) 100%)
+    background: -webkit-linear-gradient(90deg, rgba(86,46,194,0.8) 0%, rgba(160,126,254,0.8) 100%)
+    background: linear-gradient(90deg, rgba(86,46,194,0.8) 0%, rgba(160,126,254,0.8) 100%)
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#562ec2",endColorstr="#a07efe",GradientType=1)
+
+    transition: 1s
+    animation-timing-function: ease-in-out
+
+    &:hover
+      transition: .3s
+      animation-timing-function: ease-in-out
+      transform: scale(1.1)
+    &:focus
+      outline: none
+
+
+
+@media (max-width: 1056px)
+  #main
+    h1
+      padding-top: 50px
+
+  .swap
+    position: relative
+    button
+      position: absolute
+      left: -54px
+      bottom: -9px
+
+@media (max-width: 830px)
+  #main
+    h1
+      font-size: 35px
+    #exchange
+      &::after,
+      &::before
+        display: none
+  select
+    &:hover
+      box-shadow: none
+      color: #4e5983
+  #main #exchange
+    height: 244px
+    padding-top: 57px
+  .swap button
+    bottom: -17px
+  .button-exchange button[name="exchange"]
+    width: 134px
+    height: 48px
+    font-size: 14px
+
+@media (max-width: 767px)
+  #main
+    h1
+      font-size: 29px
+      padding-top: 18px
+    h4
+      padding-top: 0
+      font-size: 18px
+
+@media (max-width: 693px)
+  .button-exchange button[name="exchange"]
+    width: 95px
+    height: 44px
+    font-size: 13px
+    margin-right: 41px
+
+
+@media (max-width: 646px)
+  #main
+    h1
+      font-size: 24px
+      padding-top: 5px
+    #exchange
+      height: 213px
+      padding-top: 43px
+    .swap button
+      bottom: -26px
+
+
+@media (max-width: 450px)
+  #main
+    h1
+      font-size: 24px
+      padding-top: 5px
+      line-height: 34px
+    h4
+      padding-top: 14px
+      font-size: 15px
+    #exchange
+      max-width: 300px
+      height: 400px
+      padding-top: 20px
+      margin: 38px auto 0
+      display: -webkit-flex
+      display: -ms-flex
+      display: flex
+      flex-direction: column
+      .payment
+        margin-left: 0
+      .enter
+        p span
+          display: block
+          margin-bottom: 0
+      .payment,
+      .enter
+        height: auto
+        margin: 0 0 0 auto
+
+  .swap
+    align-self: auto
+    padding-top: 0
+    button[name="swap"]
+      opacity: 0.7
+      top: -15px
+      right: 33%
+      left: auto
+      bottom: auto
+      &:hover
+        transform: scale(1)
+  .payment form select:hover,
+  .enter form select:hover
+    box-shadow: none
+    color: #4e5983
+  .button-exchange
+    padding-top: 0
+    button[name="exchange"]
+      margin-right: 0
+      &:hover
+        transform: scale(1)
