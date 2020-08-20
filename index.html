@@ -61,7 +61,7 @@
             </form>
           </div>
           <div class="swap">
-            <button type="button" id="swap" name="swap">
+            <button type="button" onclick="swapSelect(Event)" name="swap">
               <i class="fas fa-exchange-alt"></i>
             </button>
           </div>
@@ -70,7 +70,7 @@
             <span>Сумма</span>
             <form>
               <p>
-                <input type="number" name="enter" id="enter-num" min="100" max="900" step="0.01" placeholder="0.00"></p>
+                <input type="number" name="enter" id="enter-num" min="100" max="900" step="0.01"readonly placeholder="0.00"></p>
               <select name="select" id="enter-select" size="1">
                 <option selected value="qiwi">QIWI</option>
                 <option value="money.yandex">Яндекс.Деньги</option>

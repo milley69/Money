@@ -23,12 +23,23 @@ function feeFun() {
 }
 
 // swap button
-let swap = document.querySelector('#swap');
-function chaangeSelect(e) {
-  let paymentSelect = document.querySelector('#payment-select');
-  let enterSelect = document.querySelector('#enter-select');
-  let valOne = paymentSelect.value;
+function swapSelect(addEventListener) {
+  var paymentSelect = document.querySelector('#payment-select');
+  var enterSelect = document.querySelector('#enter-select');
+  var valOne = paymentSelect.value;
   paymentSelect.value = enterSelect.value
   enterSelect.value = valOne
 }
-swap.addEventListener('click', chaangeSelect)
+
+
+
+
+
+
+
+
+
+
+
+
+//
