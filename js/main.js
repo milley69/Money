@@ -12,20 +12,23 @@ headerBurger.addEventListener('click', function() {
 })
 // end burger button
 
-
-
-
-// let payment = document.querySelector('#payment-num').value;
-// let enter = document.querySelector("#enter-num");
-//
-// payment.oninput = function() {
-//     enter.setAttribute('value', 'payment');
-//   };
-function testFunction() {
+// fee
+function feeFun() {
   var payment = document.getElementById("payment-num").value;
   var enter = document.getElementById("enter-num");
+  var fee = payment / 100 * 99.5;
+  var fee = parseFloat(fee.toFixed(2));
 
-  enter.setAttribute('value', 'payment');
-  console.log(enter);
-  console.log(payment);
+  enter.setAttribute('value', fee);
 }
+
+// swap button
+let swap = document.querySelector('#swap');
+function chaangeSelect(e) {
+  let paymentSelect = document.querySelector('#payment-select');
+  let enterSelect = document.querySelector('#enter-select');
+  let valOne = paymentSelect.value;
+  paymentSelect.value = enterSelect.value
+  enterSelect.value = valOne
+}
+swap.addEventListener('click', chaangeSelect)

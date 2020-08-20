@@ -38,6 +38,8 @@
       </div>
     </div>
 
+
+
     <section id="main">
       <div class="container">
         <h1>Мультивалютный обменный сервис 24/7</h1>
@@ -47,19 +49,19 @@
             <p>Вы отдаете</p>
             <span>Сумма</span>
             <form>
-              <p><input type="number" name="payment" oninput="testFunction()" id="payment-num" min="100" max="900" step="0.01" placeholder="100.00"></p>
-              <select name="select" size="1">
-                <option selected value="s1">QIWI</option>
-                <option value="s2">Яндекс.Деньги</option>
-                <option value="s3">Сбербанк</option>
-                <option value="s4">Альфа-Банк</option>
-                <option value="s5">Тинькофф</option>
-                <option value="s6">ВТБ</option>
+              <p><input type="number" name="payment" oninput="feeFun()" id="payment-num" min="100" max="99999999" step="0.01" placeholder="100.00"></p>
+              <select name="select" id="payment-select" size="1">
+                <option selected value="qiwi">QIWI</option>
+                <option value="money.yandex">Яндекс.Деньги</option>
+                <option value="sberbank">Сбербанк</option>
+                <option value="alfabank">Альфа-Банк</option>
+                <option value="tinkoff">Тинькофф</option>
+                <option value="vtb">ВТБ</option>
               </select>
             </form>
           </div>
           <div class="swap">
-            <button type="button" name="swap">
+            <button type="button" id="swap" name="swap">
               <i class="fas fa-exchange-alt"></i>
             </button>
           </div>
@@ -68,14 +70,14 @@
             <span>Сумма</span>
             <form>
               <p>
-                <input type="number" name="enter" id="enter-num" min="100" max="900" step="0.01" placeholder="0.00" ></p>
-              <select name="select" size="1">
-                <option selected value="s1">QIWI</option>
-                <option value="s2">Яндекс.Деньги</option>
-                <option value="s3">Сбербанк</option>
-                <option value="s4">Альфа-Банк</option>
-                <option value="s5">Тинькофф</option>
-                <option value="s6">ВТБ</option>
+                <input type="number" name="enter" id="enter-num" min="100" max="900" step="0.01" placeholder="0.00"></p>
+              <select name="select" id="enter-select" size="1">
+                <option selected value="qiwi">QIWI</option>
+                <option value="money.yandex">Яндекс.Деньги</option>
+                <option value="sberbank">Сбербанк</option>
+                <option value="alfabank">Альфа-Банк</option>
+                <option value="tinkoff">Тинькофф</option>
+                <option value="vtb">ВТБ</option>
               </select>
             </form>
           </div>
