@@ -17,6 +17,7 @@ function feeFun() {
   var payment = document.getElementById("payment-num").value;
   var enter = document.getElementById("enter-num");
   var fee = payment / 100 * 99.5;
+  // var fee = payment * 0.995;
   var fee = parseFloat(fee.toFixed(2));
 
   enter.setAttribute('value', fee);

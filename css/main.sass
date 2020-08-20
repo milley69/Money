@@ -122,33 +122,17 @@ header
       margin-left: 25px
       background: none
       padding: 12px 12px 12px 5px
-      // @include hover_lr(#000)
       position: relative
-      display: inline
-      &::after
-        content: ""
-        position: absolute
-        z-index: -1
-        right: 0
-        bottom: -5px
-        width: 0
-        height: 4px
-        background: #000
-        transition-property: width
-        transition-duration: 0.3s
-        transition-timing-function: ease-out
-      &:hover::after
-        left: 0
-        right: auto
-        width: 100%
-      // &:checked
-      //   background: transparent
-      //   color: transparent
-      //   z-index: 2
-      // &:hover
-      //   background: rgba(0, 0, 0, 0.2)
-      // &:focus
-      //   outline: none
+
+
+
+
+
+
+      &:hover
+        background: rgba(0, 0, 0, 0.01)
+      &:focus
+        outline: none
 
 
   input[type="number"]
