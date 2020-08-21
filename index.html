@@ -44,7 +44,7 @@
 
 
     <section id="main" style="background-image: url('img/bg.webp')" data-bg="img/bg.jpg" data-bg-webp="img/bg.webp">
-    <!-- <section id="main"> -->
+      <!-- <section id="main"> -->
       <div class="container">
         <h1>Мультивалютный обменный сервис 24/7</h1>
         <h4>Быстрый обмен без скрытых комиссий</h4>
@@ -55,12 +55,14 @@
             <form>
               <p><input type="number" name="payment" oninput="feeFun()" id="payment-num" min="100" max="99999999" step="0.01" placeholder="100.00"></p>
               <select name="select" id="payment-select" size="1">
-                <option selected value="qiwi">QIWI</option>
-                <option value="money.yandex">Яндекс.Деньги</option>
-                <option value="sberbank">Сбербанк</option>
-                <option value="alfabank">Альфа-Банк</option>
-                <option value="tinkoff">Тинькофф</option>
-                <option value="vtb">ВТБ</option>
+                <option selected value="qiwi">Qiwi RUB</option>
+                <option value="money.yandex">Yandex RUB</option>
+                <option value="sberbank">Сбербанк RUB</option>
+                <option value="paypal">PayPal USD</option>
+                <option value="bitcoin">Bitcoin BTC</option>
+                <option value="ethereum">Ethereum ETH</option>
+                <option value="privat">Приват 24 UAH</option>
+                <option value="PM">PM USD</option>
               </select>
             </form>
           </div>
@@ -76,12 +78,14 @@
               <p>
                 <input type="number" name="enter" id="enter-num" min="100" max="900" step="0.01" readonly placeholder="0.00"></p>
               <select name="select" id="enter-select" size="1">
-                <option selected value="qiwi">QIWI</option>
-                <option value="money.yandex">Яндекс.Деньги</option>
-                <option value="sberbank">Сбербанк</option>
-                <option value="alfabank">Альфа-Банк</option>
-                <option value="tinkoff">Тинькофф</option>
-                <option value="vtb">ВТБ</option>
+                <option selected value="qiwi">Qiwi RUB</option>
+                <option value="money.yandex">Yandex RUB</option>
+                <option value="sberbank">Сбербанк RUB</option>
+                <option value="paypal">PayPal USD</option>
+                <option value="bitcoin">Bitcoin BTC</option>
+                <option value="ethereum">Ethereum ETH</option>
+                <option value="privat">Приват 24 UAH</option>
+                <option value="PM">PM USD</option>
               </select>
             </form>
           </div>
@@ -92,6 +96,133 @@
       </div>
     </section>
   </header>
+
+  <section id="about">
+    <div class="container">
+      <div class="about">
+        <div class="security">
+          <picture>
+            <source srcset="img/about/security.webp" type="image/webp">
+            <img src="img/about/security.png" alt="">
+          </picture>
+          <h1>Безопасность</h1>
+          <p>Усиленная безопасность ваших обменов, усиленная безопасность от мошенников!</p>
+        </div>
+        <div class="referal">
+          <picture>
+            <source srcset="img/about/referal.webp" type="image/webp">
+            <img src="img/about/referal.png" alt="">
+          </picture>
+          <h1>Реферальная система</h1>
+          <p>На сервисе работает партнерская программа , за каждый обмен приведенного вами клиента, вы получаете 0.5% с нашей прибыли.</p>
+        </div>
+        <div class="support">
+          <picture>
+            <source srcset="img/about/support.webp" type="image/webp">
+            <img src="img/about/support.png" alt="">
+          </picture>
+          <h1>Онлайн поддержка</h1>
+          <p>Четыре вида поддержки для наших клиентов: Телеграмм канал, E-mail поддержка, и мобильный номер (Viber).</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="history">
+    <div class="container">
+    <div class="history-block">
+
+    <div class="history-texts">
+      <h1>Сервис обмена электронных валют с 5-летней историей</h1>
+      <h4>За время работы мы приобрели репутацию проверенного партнера и делаем все возможное, чтобы ваши впечатления от нашего сервиса были только благоприятными.</h4>
+    </div>
+    <picture>
+      <source srcset="img/history/history.webp" type="image/webp">
+      <img src="img/history/history.png" alt="">
+    </picture>
+
+</div>
+</div>
+  </section>
+
+  <section id="reserve">
+    <div class="container">
+      <h1>Резерв валюты</h1>
+
+      <div class="reserve-column">
+
+        <div class="reserve-item">
+          <picture>
+            <source srcset="img/reserve/yandex.webp" type="image/webp">
+            <img src="img/reserve/yandex.png" alt="yandex">
+          </picture>
+          <h4>Yandex RUB</h4>
+          <p>900549</p>
+        </div>
+        <div class="reserve-item">
+          <picture>
+            <source srcset="img/reserve/ethereum.webp" type="image/webp">
+            <img src="img/reserve/ethereum.png" alt="ethereum">
+          </picture>
+          <h4>Ethereum ETH</h4>
+          <p>123</p>
+        </div>
+        <div class="reserve-item">
+          <picture>
+            <source srcset="img/reserve/bitcoin.webp" type="image/webp">
+            <img src="img/reserve/bitcoin.png" alt="bitcoin">
+          </picture>
+          <h4>Bitcoin BTC</h4>
+          <p>0.63333439</p>
+        </div>
+        <div class="reserve-item">
+          <picture>
+            <source srcset="img/reserve/sberbank.webp" type="image/webp">
+            <img src="img/reserve/sberbank.png" alt="sberbank">
+          </picture>
+          <h4>Сбербанк RUB</h4>
+          <p>142666</p>
+        </div>
+        <div class="reserve-item">
+          <picture>
+            <source srcset="img/reserve/privat.webp" type="image/webp">
+            <img src="img/reserve/privat.png" alt="privat">
+          </picture>
+          <h4>Приват 24 UAH</h4>
+          <p>142666</p>
+        </div>
+        <div class="reserve-item">
+          <picture>
+            <source srcset="img/reserve/paypal.webp" type="image/webp">
+            <img src="img/reserve/paypal.png" alt="paypal">
+          </picture>
+          <h4>PayPal USD</h4>
+          <p>5139.58</p>
+        </div>
+        <div class="reserve-item">
+          <picture>
+            <source srcset="img/reserve/PM.webp" type="image/webp">
+            <img src="img/reserve/PM.png" alt="PM">
+          </picture>
+          <h4>PM USD</h4>
+          <p>3192.22</p>
+        </div>
+        <div class="reserve-item">
+          <picture>
+            <source srcset="img/reserve/Qiwi.webp" type="image/webp">
+            <img src="img/reserve/Qiwi.png" alt="Qiwi">
+          </picture>
+          <h4>Qiwi RUB</h4>
+          <p>99243.321</p>
+        </div>
+
+      </div>
+
+
+    </div>
+  </section>
+
+
   <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
   <script src="js/main.js"></script>
 </body>
