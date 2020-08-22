@@ -1,6 +1,7 @@
 //
 @import "font.sass"
 @import "mixin/hover/hover.sass"
+@import "mixin/flex.sass"
 
 @import "qq.sass"
 
@@ -127,22 +128,244 @@ header
   background: linear-gradient(180deg, rgba(239,242,250,1) 0%, rgba(255,255,255,0) 100%)
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#eff2fa",endColorstr="#ffffff",GradientType=1)
   height: 651px
+  padding-top: 350px
+  margin-bottom: 150px
+  h1
+    color: #160647
+    font-size: 35px
+    font-weight: 500
+    line-height: 39.17px
+    text-align: center
+    padding-bottom: 80px
 
 
 
+.reserve-column
+  // text-align: center
+  // @include flexbox()
+  justify-content: space-between
+  // flex-wrap: wrap
+  display: grid
+  grid-template-columns: repeat(4, 230px)
+  grid-template-rows: 55px 55px
+  grid-row-gap: 80px
+  // grid-template-columns: 1fr 1fr 1fr 1fr
+
+
+.reserve-item
+  display: grid
+  grid-template-areas: "logo brand"
+  grid-template-columns: 55px 155px
+  grid-gap: 16px
+  img
+    grid-area: logo
+  .brand
+    grid-area: brand
+    h4
+      color: #a4aabf
+      font-size: 16px
+      font-weight: 400
+    p
+      color: #160647
+      font-size: 18px
+      font-weight: 400
+      line-height: 31.99px
 
 
 
+#comment
+  min-height: 480px
+  h1
+    color: #160647
+    font-size: 35px
+    font-weight: 500
+    line-height: 46.34px
+  p
+    width: 488px
+    opacity: 0.7
+    color: #4e5983
+    font-size: 18px
+    font-weight: 400
+    line-height: 29.88px
+    position: relative
+    z-index: 2
+    // &::before
+      content: ""
+      position: absolute
+      top: 0
+      left: 0
+      background: url(../img/comment_bgr.png) no-repeat
+      width: 167px
+      height: 185px
+      z-index: 1
+
+  h3
+    color: #160647
+    font-size: 20px
+    font-weight: 400
+    line-height: 31.1px
+    display: inline-block
+    margin-right: 30px
+  span
+    color: #838ba8
+    font-size: 14px
+    font-weight: 400
+
+
+.owl-carousel
+  margin-top: 100px
+  .nav-btn
+    height: 15px
+    // position: absolute
+    cursor: pointer
+
+  .owl-prev .nav-btn
+    width: 37px
+  .owl-next .nav-btn
+    width: 72px
+
+  .prev-slide
+    background: url(../img/Arrows.png) no-repeat scroll 0 0
+    right: 24px
+    // left: -33px
+    &:hover
+      background-position: 0px -15px
+    &:focus
+      outline: none
+
+  .next-slide
+    background: url(../img/Arrows.png) no-repeat scroll -37px 0px
+    // right: -23px
+    &:hover
+      background-position: -37px -15px
+    &:focus
+      outline: none
+
+.owl-theme .owl-nav
+  text-align: right
+  &.owl-theme
+    &:focus
+      outline: none
+
+.owl-theme .owl-nav [class*=owl-]:hover
+  background: none
 
 
 
+#main-2nd
+  position: relative
+  margin-top: 215px
+  .main_2nd
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    width: 1238px
+    height: 447px
+    background: url('../img/main_2nd.png') no-repeat
+    display: grid
+    grid-template-areas: ". content"
+    grid-template-columns: 1fr 1fr
+    align-items: flex-end
+    .main_2nd-content
+      grid-area: content
+      // align-self: center
+      margin-bottom: 34px
+      p
+        max-width: 466px
+        color: #ffffff
+        font-size: 35px
+        font-weight: 500
+        line-height: 46.34px
+      span
+        opacity: 0.7
+        color: #ffffff
+        font-size: 18px
+        font-weight: 400
+        line-height: 29.97px
+        display: block
+        margin: 22px 0 48px
+      button
+        color: #9f7dfd
+        font-size: 16px
+        font-weight: 500
+        width: 225px
+        height: 70px
+        border-radius: 10px
+        background-color: rgba(255, 255, 255, 0.8)
+        box-shadow: 0px 0px 6px 0px floralwhite
+        transition: .4s ease-in-out
+        &:hover
+          transition: .3s ease-in-out
+          box-shadow: 0 0 20px 2px floralwhite
 
 
 
+footer
+  height: 100px
+  position: relative
+  margin-top: 550px
+
+  .footer_content
+    @include flexbox()
+    justify-content: space-between
+
+    .footer_logo
+      position: relative
+      span
+        position: absolute
+        bottom: -32px
+        left: 28px
+        color: #838ba8
+        font-size: 14px
+        font-weight: 400
+        width: 290px
+    nav
+      a
+        color: #4e5983
+        font-size: 14px
+        font-weight: 400
+    .social
+      i
+        font-size: 26px
+        width: 29px
+        height: 29px
+        color: #fff
+        text-align: center
+
+      .fa-vk
+        background-color: #4d76a1
+        border-radius: 50%
+        font-size: 19px
+        padding-top: 5px
+      .fa-facebook-f
+        background-color: #3b5998
+        border-radius: 50%
+        font-size: 19px
+        padding-top: 5px
+        margin: 0 8px
+      .fa-instagram
+        background: rgb(255,221,85)
+        background: -moz-linear-gradient(45deg, rgba(255,221,85,1) 0%, rgba(255,84,62,1) 50%, rgba(200,55,171,1) 100%)
+        background: -webkit-linear-gradient(45deg, rgba(255,221,85,1) 0%, rgba(255,84,62,1) 50%, rgba(200,55,171,1) 100%)
+        background: linear-gradient(45deg, rgba(255,221,85,1) 0%, rgba(255,84,62,1) 50%, rgba(200,55,171,1) 100%)
+        // filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffdd55",endColorstr="#c837ab",GradientType=1)
+        border-radius: 25%
+        font-size: 25px
+        padding-top: 1px
+        padding-left: 1px
 
 
-
-
+.fa-vk,
+.fa-facebook-f,
+.fa-instagram
+  transition: .3s ease-in-out
+.fa-vk:hover
+  box-shadow: 0px 0px 9px 1px #4d76a1
+.fa-facebook-f:hover
+  box-shadow: 0px 0px 9px 1px #3b5998
+.fa-instagram:hover
+  box-shadow: 0px 0px 9px 1px rgb(255,221,85)
 
 
 

@@ -37,12 +37,6 @@ window.onload = function() {
 };
 
 
-
-
-
-
-
-
 // start burger button
 var headerBurger = document.querySelector('.header-burger');
 var burgerBg = document.querySelector('.burger-bg');
@@ -78,9 +72,27 @@ function swapSelect(addEventListener) {
 }
 
 
+$(document).ready(function(){
+  $(".owl-carousel").owlCarousel({
+    loop:true,
+    autoHeight:true,
+    nav:true,
+    dots:false,
+    autoplay:true,
+    autoplayTimeout:25000,
+    navSpeed:1500,
 
+    // navText : ["<i class='fas fa-long-arrow-alt-left'></i>","<i class='fas fa-long-arrow-alt-right'></i>"],
+    navText:["<div class='nav-btn prev-slide'></div>","<div class='nav-btn next-slide'></div>"],
+    items:2
+  });
+});
 
-
+fetch('https://www.instagram.com/', {
+  trustToken: {  
+    type: 'token-request'
+  }
+});
 
 
 
