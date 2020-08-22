@@ -36,32 +36,25 @@ window.onload = function() {
   }
 };
 
-
 // start burger button
 var headerBurger = document.querySelector('.header-burger');
 var burgerBg = document.querySelector('.burger-bg');
 var headerNav = document.querySelector('.header_nav nav');
 var login = document.querySelector('.login');
-
 headerBurger.addEventListener('click', function() {
   headerBurger.classList.toggle('open'),
     headerNav.classList.toggle('open'),
     login.classList.toggle('open'),
     burgerBg.classList.toggle('open');
 })
-// end burger button
-
 // fee
 function feeFun() {
   var payment = document.getElementById("payment-num").value;
   var enter = document.getElementById("enter-num");
   var fee = payment / 100 * 99.5;
-  // var fee = payment * 0.995;
   var fee = parseFloat(fee.toFixed(2));
-
   enter.setAttribute('value', fee);
 }
-
 // swap button
 function swapSelect(addEventListener) {
   var paymentSelect = document.querySelector('#payment-select');
@@ -70,8 +63,7 @@ function swapSelect(addEventListener) {
   paymentSelect.value = enterSelect.value
   enterSelect.value = valOne
 }
-
-
+// owl-carousel
 $(document).ready(function(){
   $(".owl-carousel").owlCarousel({
     loop:true,
@@ -81,20 +73,13 @@ $(document).ready(function(){
     autoplay:true,
     autoplayTimeout:25000,
     navSpeed:1500,
-
-    // navText : ["<i class='fas fa-long-arrow-alt-left'></i>","<i class='fas fa-long-arrow-alt-right'></i>"],
-    navText:["<div class='nav-btn prev-slide'></div>","<div class='nav-btn next-slide'></div>"],
-    items:2
+    items:2,
+    navText:["<div class='nav-btn prev-slide'></div>","<div class='nav-btn next-slide'></div>"]
   });
 });
-
-fetch('https://www.instagram.com/', {
-  trustToken: {  
-    type: 'token-request'
-  }
-});
-
-
-
-
-//
+// slowScroll
+function slowScroll(tag) {
+  $('html, body').animate({
+    scrollTop: $(tag).offset().top
+  }, 1000);
+}
