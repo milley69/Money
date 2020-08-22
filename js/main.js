@@ -64,17 +64,17 @@ function swapSelect(addEventListener) {
   enterSelect.value = valOne
 }
 // owl-carousel
-$(document).ready(function(){
+$(document).ready(function() {
   $(".owl-carousel").owlCarousel({
-    loop:true,
-    autoHeight:true,
-    nav:true,
-    dots:false,
-    autoplay:true,
-    autoplayTimeout:25000,
-    navSpeed:1500,
-    items:2,
-    navText:["<div class='nav-btn prev-slide'></div>","<div class='nav-btn next-slide'></div>"]
+    loop: true,
+    autoHeight: true,
+    nav: true,
+    dots: false,
+    autoplay: true,
+    autoplayTimeout: 25000,
+    navSpeed: 1500,
+    items: 2,
+    navText: ["<div class='nav-btn prev-slide'></div>", "<div class='nav-btn next-slide'></div>"]
   });
 });
 // slowScroll
